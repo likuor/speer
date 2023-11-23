@@ -24,8 +24,27 @@ const ActivityList = ({ feed }) => {
               <ListItemIcon>
                 {switchIcon(activity.direction, activity.call_type)}
               </ListItemIcon>
-              <ListItemText primary={activity.from} />
-              <ListItemText secondary={handleTime(activity.created_at)} />
+              <ListItemText
+                primary={activity.from}
+                style={{
+                  maxWidth: '30%',
+                }}
+              />
+              <div
+                style={{
+                  flex: 1,
+                  display: 'flex',
+                  justifyContent: 'flex-end',
+                  alignItems: 'flex-end',
+                }}
+              >
+                <ListItemText
+                  secondary={handleTime(activity.created_at)}
+                  style={{
+                    textAlign: 'end',
+                  }}
+                />
+              </div>
             </ListItemButton>
           </ListItem>
         ))}
