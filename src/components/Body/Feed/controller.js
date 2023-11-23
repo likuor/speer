@@ -1,11 +1,10 @@
-import React from 'react';
-// import getActivities from '../../../api/getActivities';
+import getActivities from '../../../api/getActivities';
 
-export const FeedController = async () => {
-  // const { res } = await getActivities();
+const FeedController = async () => {
+  const allFeed = await getActivities();
 
   return {
-    res,
+    allFeed,
   };
 };
 

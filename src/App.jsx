@@ -1,13 +1,13 @@
 import React from 'react';
 import Header from './Header.jsx';
-import Home from './pages/Home.jsx';
+import Feed from './pages/Feed.jsx';
 
 const App = () => {
   return (
     <div className='container'>
       <Header />
       <div className='container-view'>
-        <Home />
+        <Feed />
       </div>
     </div>
   );
