@@ -1,10 +1,20 @@
-import React from 'react';
-import FeedController from '../components/Body/Feed/controller';
+import React, { useEffect, useState } from 'react';
+import getActivities from '../api/getActivities';
 
 const Feed = () => {
-  // const res = FeedController();
+  const [allFeed, setAllFeed] = useState(null);
 
-  return <div>Feed</div>;
+  useEffect(() => {
+    const fetchActivities = async () => {
+      const data = await getActivities();
+      console.log(data);
+      setAllFeed(data);
+    };
+
+    fetchActivities();
+  }, []);
+
+  return <div>{allFeed ? 'Feed' : 'Loading...'}</div>;
 };
 
 export default Feed;
