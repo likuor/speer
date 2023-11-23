@@ -1,20 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import getActivities from '../api/getActivities';
+import ActivityList from '../components/Feed/ActivityList/index';
 
 const Feed = () => {
-  const [allFeed, setAllFeed] = useState(null);
+  const [feed, setFeed] = useState(null);
 
   useEffect(() => {
     const fetchActivities = async () => {
       const data = await getActivities();
-      console.log(data);
-      setAllFeed(data);
+
+      const filterdArchived = data.filter(
+        (activity) => activity.is_archived === false && activity.from
+      );
+      setFeed(filterdArchived);
     };
 
     fetchActivities();
   }, []);
 
-  return <div>{allFeed ? 'Feed' : 'Loading...'}</div>;
+  return (
+    <div>
+      <ActivityList feed={feed} />
+    </div>
+  );
 };
 
 export default Feed;
