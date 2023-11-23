@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import getActivities from '../api/getActivities';
-import ActivityList from '../components/Feed/ActivityList/index';
+import ActivityList from '../components/Feed/ActivityList/index.jsx';
 
 const Feed = () => {
   const [feed, setFeed] = useState(null);

@@ -5,10 +5,11 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import switchIcon from '../helper/switchIcon';
+import switchIcon from '../helper/switchIcon.js';
 
 const ActivityList = ({ feed }) => {
   console.log('aaaaaa', feed);
+
   return (
     <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       <List
