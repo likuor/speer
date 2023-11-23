@@ -8,10 +8,11 @@ const Feed = () => {
   useEffect(() => {
     const fetchActivities = async () => {
       const data = await getActivities();
-
+      // const filterdFrom = data.filter((activity) => activity.from);
       const filterdArchived = data.filter(
-        (activity) => activity.is_archived === false && activity.from
+        (activity) => activity.is_archived === true
       );
+      console.log(filterdArchived);
       setFeed(filterdArchived);
     };
 

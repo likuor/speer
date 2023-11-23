@@ -6,10 +6,9 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import switchIcon from '../helper/switchIcon.js';
+import handleTime from '../helper/handleTime.js';
 
 const ActivityList = ({ feed }) => {
-  console.log('aaaaaa', feed);
-
   return (
     <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       <List
@@ -26,7 +25,7 @@ const ActivityList = ({ feed }) => {
                 {switchIcon(activity.direction, activity.call_type)}
               </ListItemIcon>
               <ListItemText primary={activity.from} />
-              <ListItemText secondary={activity.duration} />
+              <ListItemText secondary={handleTime(activity.created_at)} />
             </ListItemButton>
           </ListItem>
         ))}
