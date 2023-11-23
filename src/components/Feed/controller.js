@@ -1,4 +1,4 @@
-import getActivities from '../../../api/getActivities';
+import getActivities from '../../api/getActivities';
 
 const FeedController = async () => {
   const allFeed = await getActivities();
