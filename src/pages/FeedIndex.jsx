@@ -20,6 +20,7 @@ const FeedIndex = () => {
 
   return (
     <div>
+      <div>Feed</div>
       <ActivityList feed={feed} />
     </div>
   );

@@ -12,7 +12,6 @@ import { useNavigate } from 'react-router-dom';
 const ActivityList = ({ feed }) => {
   const navigate = useNavigate();
   const handleClick = (activity) => {
-    console.log(activity);
     navigate('/' + activity.id);
   };
 
