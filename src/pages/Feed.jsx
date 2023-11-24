@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import getActivities from '../api/getActivities';
 import ActivityList from '../components/Feed/ActivityList/index.jsx';
+import { Outlet } from 'react-router-dom';
 
 const Feed = () => {
   const [feed, setFeed] = useState(null);
@@ -21,6 +22,7 @@ const Feed = () => {
   return (
     <div>
       <ActivityList feed={feed} />
+      <Outlet />
     </div>
   );
 };
