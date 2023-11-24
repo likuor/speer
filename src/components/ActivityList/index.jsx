@@ -10,9 +10,13 @@ import handleTime from '../../helper/handleTime.js';
 import IconButton from '@mui/material/IconButton';
 import CommentIcon from '@mui/icons-material/Comment';
 import ActivityListController from './controller.js';
+import Circular from '../Circular/index.jsx';
 
 const ActivityList = ({ feed }) => {
   const { handleClick, handleArchived } = ActivityListController();
+  console.log(feed);
+
+  if (!feed) return <Circular />;
 
   return (
     <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
