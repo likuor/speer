@@ -5,22 +5,14 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import switchIcon from '../helper/switchIcon.js';
-import handleTime from '../helper/handleTime.js';
-import { useNavigate } from 'react-router-dom';
+import switchIcon from '../../helper/switchIcon.js';
+import handleTime from '../../helper/handleTime.js';
 import IconButton from '@mui/material/IconButton';
 import CommentIcon from '@mui/icons-material/Comment';
-import patchOneArchive from '../../../api/patchOneArchive.js';
+import ActivityListController from './controller.js';
 
 const ActivityList = ({ feed }) => {
-  const navigate = useNavigate();
-  const handleClick = (activity) => {
-    navigate('/' + activity.id);
-  };
-
-  const handleArchived = (activity) => {
-    patchOneArchive(activity.id, activity.is_archived);
-  };
+  const { handleClick, handleArchived } = ActivityListController();
 
   return (
     <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>

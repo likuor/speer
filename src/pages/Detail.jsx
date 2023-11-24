@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import handleDateTime from '../components/Feed/helper/handleTime';
-import handleDetail from '../components/Feed/helper/handleDetail';
-import switchIcon from '../components/Feed/helper/switchIcon';
+import handleDateTime from '../helper/handleTime';
+import handleDetail from '../helper/handleDetail';
+import switchIcon from '../helper/switchIcon';
+import getDetail from '../api/getDetail';
 
 const Detail = () => {
   const { id } = useParams();
@@ -10,10 +11,7 @@ const Detail = () => {
 
   useEffect(() => {
     const fetchDetail = async () => {
-      const res = await fetch(
-        `https://cerulean-marlin-wig.cyclic.app/activities/${id}`
-      );
-      const data = await res.json();
+      const data = await getDetail(id);
       setDdetail(data);
     };
     fetchDetail();

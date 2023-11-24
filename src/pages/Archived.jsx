@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import getActivities from '../api/getActivities.js';
-import ActivityList from '../components/Feed/ActivityList/index.jsx';
-import BasicButton from '../components/BasicButton/index.js';
+import ActivityList from '../components/ActivityList/index.jsx';
+import BasicButton from '../components/BasicButton/index.jsx';
 
 const Archived = () => {
   const [feed, setFeed] = useState(null);
