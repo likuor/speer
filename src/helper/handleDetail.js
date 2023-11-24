@@ -8,7 +8,7 @@ const handleDetail = (direction, callType, duration) => {
 
     // no icon for answered
     if (callType === 'answered') {
-      return `Chated for ${handleDuration(duration)}`;
+      return `Chatted for ${handleDuration(duration)}`;
     }
   }
 
@@ -19,7 +19,7 @@ const handleDetail = (direction, callType, duration) => {
 
     // no icon for answered
     if (callType === 'answered') {
-      return `Chated for ${handleDuration(duration)}`;
+      return `Chatted for ${handleDuration(duration)}`;
     }
 
     if (callType === 'voicemail') {

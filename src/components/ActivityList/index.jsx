@@ -8,13 +8,12 @@ import ListItemText from '@mui/material/ListItemText';
 import switchIcon from '../../helper/switchIcon.js';
 import handleTime from '../../helper/handleTime.js';
 import IconButton from '@mui/material/IconButton';
-import CommentIcon from '@mui/icons-material/Comment';
+import ArchiveIcon from '@mui/icons-material/Archive';
 import ActivityListController from './controller.js';
 import Circular from '../Circular/index.jsx';
 
 const ActivityList = ({ feed }) => {
   const { handleClick, handleArchived } = ActivityListController();
-  console.log(feed);
 
   if (!feed) return <Circular />;
 
@@ -24,7 +23,7 @@ const ActivityList = ({ feed }) => {
         sx={{
           position: 'relative',
           overflow: 'auto',
-          maxHeight: 430,
+          maxHeight: 420,
         }}
       >
         {feed?.map((activity, index) => (
@@ -39,9 +38,9 @@ const ActivityList = ({ feed }) => {
                   onClick={() => handleArchived(activity)}
                 >
                   {activity.is_archived ? (
-                    <CommentIcon style={{ color: 'blue' }} />
+                    <ArchiveIcon style={{ color: 'blue' }} />
                   ) : (
-                    <CommentIcon />
+                    <ArchiveIcon />
                   )}
                 </IconButton>
               ) : (
