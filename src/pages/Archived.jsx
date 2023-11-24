@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import getActivities from '../api/getActivities.js';
 import ActivityList from '../components/Feed/ActivityList/index.jsx';
+import BasicButton from '../components/BasicButton/index.js';
 
 const Archived = () => {
   const [feed, setFeed] = useState(null);
 
   useEffect(() => {
-    const fetchActivities = async () => {
+    const fetchArchives = async () => {
       const data = await getActivities();
       const filterdArchived = data
         .filter((activity) => activity.is_archived === true)
@@ -15,12 +16,15 @@ const Archived = () => {
       setFeed(filterdArchived);
     };
 
-    fetchActivities();
+    fetchArchives();
   }, []);
 
   return (
     <div>
-      Archived
+      <div>
+        Feed
+        <BasicButton text={'All unarchive'} color={'error'} />
+      </div>
       <ActivityList feed={feed} />
     </div>
   );
