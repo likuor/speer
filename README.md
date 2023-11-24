@@ -1,3 +1,9 @@
+## Originality
+- Added React query to call API (Avoiding fat code)
+- When you click a list item on feed page, you will jump into detail page
+- Boosted making UI/UX design using MUI
+- Well organized folder structure having view and controller files (e.g. src/pages and components/pages are paired)
+
 ## Summary
 
 The goal of this test is to make you code a small ReactJS app. We have prepared a skeleton app for you, but please change whatever you want (CSS files, HTML structure, JS structure, etc).
