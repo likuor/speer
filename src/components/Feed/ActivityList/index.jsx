@@ -28,7 +28,7 @@ const ActivityList = ({ feed }) => {
         sx={{
           position: 'relative',
           overflow: 'auto',
-          maxHeight: 500,
+          maxHeight: 430,
         }}
       >
         {feed?.map((activity, index) => (
