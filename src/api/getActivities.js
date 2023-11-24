@@ -10,7 +10,7 @@ const getActivities = async () => {
     return allFeed;
   } catch (error) {
     console.error('Error: get', error);
-    return null;
+    return [];
   }
 };
 
