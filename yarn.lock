@@ -1274,6 +1274,11 @@
   "resolved" "https://registry.npmjs.org/@popperjs/core/-/core-2.11.8.tgz"
   "version" "2.11.8"
 
+"@remix-run/router@1.13.0":
+  "integrity" "sha512-5dMOnVnefRsl4uRnAdoWjtVTdh8e6aZqgM4puy9nmEADH72ck+uXwzpJLEKE9Q6F8ZljNewLgmTfkxUrBdv4WA=="
+  "resolved" "https://registry.npmjs.org/@remix-run/router/-/router-1.13.0.tgz"
+  "version" "1.13.0"
+
 "@types/body-parser@*":
   "integrity" "sha512-fB3Zu92ucau0iQ0JMCFQE7b/dv8Ot07NI3KaZIkIUNXq82k4eBAqUaneXfleGY9JWskeS9y+u0nXMyspcuQrCg=="
   "resolved" "https://registry.npmjs.org/@types/body-parser/-/body-parser-1.19.5.tgz"
@@ -3456,7 +3461,7 @@
     "iconv-lite" "0.4.24"
     "unpipe" "1.0.0"
 
-"react-dom@^17.0.0 || ^18.0.0", "react-dom@^18.2.0", "react-dom@>=16.6.0", "react-dom@>=16.8.0":
+"react-dom@^17.0.0 || ^18.0.0", "react-dom@^18.2.0", "react-dom@>=16.6.0", "react-dom@>=16.8", "react-dom@>=16.8.0":
   "integrity" "sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   "version" "18.2.0"
@@ -3479,6 +3484,21 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-18.2.0.tgz"
   "version" "18.2.0"
 
+"react-router-dom@^6.20.0":
+  "integrity" "sha512-CbcKjEyiSVpA6UtCHOIYLUYn/UJfwzp55va4yEfpk7JBN3GPqWfHrdLkAvNCcpXr8QoihcDMuk0dzWZxtlB/mQ=="
+  "resolved" "https://registry.npmjs.org/react-router-dom/-/react-router-dom-6.20.0.tgz"
+  "version" "6.20.0"
+  dependencies:
+    "@remix-run/router" "1.13.0"
+    "react-router" "6.20.0"
+
+"react-router@6.20.0":
+  "integrity" "sha512-pVvzsSsgUxxtuNfTHC4IxjATs10UaAtvLGVSA1tbUE4GDaOSU1Esu2xF5nWLz7KPiMuW8BJWuPFdlGYJ7/rW0w=="
+  "resolved" "https://registry.npmjs.org/react-router/-/react-router-6.20.0.tgz"
+  "version" "6.20.0"
+  dependencies:
+    "@remix-run/router" "1.13.0"
+
 "react-transition-group@^4.4.5":
   "integrity" "sha512-pZcd1MCJoiKiBR2NRxeCRg13uCXbydPnmB4EOeRrY7480qNWO8IIgQG6zlDkm6uRMsURXPuKq0GWtiM59a5Q6g=="
   "resolved" "https://registry.npmjs.org/react-transition-group/-/react-transition-group-4.4.5.tgz"
@@ -3489,7 +3509,7 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react@^17.0.0 || ^18.0.0", "react@^18.2.0", "react@>=16.6.0", "react@>=16.8.0":
+"react@^17.0.0 || ^18.0.0", "react@^18.2.0", "react@>=16.6.0", "react@>=16.8", "react@>=16.8.0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"
