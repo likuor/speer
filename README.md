@@ -1,4 +1,5 @@
 ## Originality
+URL: https://speer-git-main-likuor.vercel.app/
 - Added React query to call API (Avoiding fat code)
 - When you click a list item on feed page, you will jump into detail page
 - Boosted making UI/UX design using MUI
