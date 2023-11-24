@@ -5,22 +5,10 @@ import BasicButton from '../../../components/BasicButton/index.jsx';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
+import FeedController from './controller.js';
 
 const Feed = () => {
-  const [feed, setFeed] = useState(null);
-
-  useEffect(() => {
-    const fetchFeed = async () => {
-      const data = await getActivities();
-      const filterdNoNArchived = data
-        .filter((activity) => activity.is_archived === false && activity.from)
-        .reverse();
-      console.log('Feed', filterdNoNArchived);
-      setFeed(filterdNoNArchived);
-    };
-
-    fetchFeed();
-  }, []);
+  const { filterdFeed: feed, isLoading } = FeedController();
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>

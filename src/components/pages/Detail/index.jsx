@@ -10,20 +10,12 @@ import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import DetailController from './controller.js';
 
 const Detail = () => {
-  const { id } = useParams();
-  const [detail, setDdetail] = useState('');
+  const { detail, isLoading } = DetailController();
 
-  useEffect(() => {
-    const fetchDetail = async () => {
-      const data = await getDetail(id);
-      setDdetail(data);
-    };
-    fetchDetail();
-  }, [id]);
-
-  if (!detail) return <Circular />;
+  if (isLoading) return <Circular />;
 
   return (
     <>
