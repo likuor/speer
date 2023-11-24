@@ -1,9 +1,9 @@
 import React from 'react';
 import Header from './Header.jsx';
-import Feed from './pages/Feed.jsx';
+import FeedParent from './pages/Feed.jsx';
 import FeedIndex from './pages/FeedIndex.jsx';
-import Detail from './pages/Detail.jsx';
-import Archived from './pages/Archived.jsx';
+import DetailIndex from './pages/Detail.jsx';
+import ArchivedIndex from './pages/Archived.jsx';
 import Navbar from './components/Navbar/index.jsx';
 import { Routes, Route } from 'react-router-dom';
 
@@ -13,11 +13,11 @@ const App = () => {
       <Header />
       <div className='container-view'>
         <Routes>
-          <Route path='/' element={<Feed />}>
+          <Route path='/' element={<FeedParent />}>
             <Route index element={<FeedIndex />} />
-            <Route path=':id' element={<Detail />} />
+            <Route path=':id' element={<DetailIndex />} />
           </Route>
-          <Route path='/archived' element={<Archived />} />
+          <Route path='/archived' element={<ArchivedIndex />} />
         </Routes>
       </div>
       <Navbar />

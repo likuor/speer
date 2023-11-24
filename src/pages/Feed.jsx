@@ -1,8 +1,8 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 
-const Feed = () => {
+const FeedParent = () => {
   return <Outlet />;
 };
 
-export default Feed;
+export default FeedParent;
