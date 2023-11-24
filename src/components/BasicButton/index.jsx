@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '@mui/material/Button';
 import BasicButtonController from './controller';
 
-export default function BasicButton({ text, color, feed }) {
+const BasicButton = ({ text, color, feed }) => {
   const { handleClick } = BasicButtonController(feed);
 
   return (
@@ -10,4 +10,6 @@ export default function BasicButton({ text, color, feed }) {
       {text}
     </Button>
   );
-}
+};
+
+export default BasicButton;

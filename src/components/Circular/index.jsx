@@ -2,7 +2,7 @@ import React from 'react';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 
-export default function Circular() {
+const Circular = () => {
   return (
     <Box
       sx={{
@@ -16,4 +16,5 @@ export default function Circular() {
       <CircularProgress />
     </Box>
   );
-}
+};
+export default Circular;

@@ -5,7 +5,7 @@ import RestoreIcon from '@mui/icons-material/Restore';
 import ArchiveIcon from '@mui/icons-material/Archive';
 import NavbarController from './controller';
 
-export default function Navbar() {
+const Navbar = () => {
   const { page, handleChange } = NavbarController();
 
   return (
@@ -23,4 +23,6 @@ export default function Navbar() {
       />
     </BottomNavigation>
   );
-}
+};
+
+export default Navbar;
