@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Header.jsx';
 import Feed from './pages/Feed.jsx';
+import FeedIndex from './pages/FeedIndex.jsx';
 import Detail from './pages/Detail.jsx';
 import Archived from './pages/Archived.jsx';
 import Navbar from './components/Navbar/index.jsx';
@@ -13,6 +14,7 @@ const App = () => {
       <div className='container-view'>
         <Routes>
           <Route path='/' element={<Feed />}>
+            <Route index element={<FeedIndex />} />
             <Route path=':id' element={<Detail />} />
           </Route>
           <Route path='/archived' element={<Archived />} />

@@ -7,8 +7,15 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import switchIcon from '../helper/switchIcon.js';
 import handleTime from '../helper/handleTime.js';
+import { useNavigate } from 'react-router-dom';
 
 const ActivityList = ({ feed }) => {
+  const navigate = useNavigate();
+  const handleClick = (activity) => {
+    console.log(activity);
+    navigate('/' + activity.id);
+  };
+
   return (
     <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       <List
@@ -20,7 +27,7 @@ const ActivityList = ({ feed }) => {
       >
         {feed?.map((activity) => (
           <ListItem key={activity.id} disablePadding>
-            <ListItemButton>
+            <ListItemButton onClick={() => handleClick(activity)}>
               <ListItemIcon>
                 {switchIcon(activity.direction, activity.call_type)}
               </ListItemIcon>
