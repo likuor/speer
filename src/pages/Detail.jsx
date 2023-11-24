@@ -9,14 +9,14 @@ const Detail = () => {
   const [detail, setDdetail] = useState('');
 
   useEffect(() => {
-    const fetchPost = async () => {
+    const fetchDetail = async () => {
       const res = await fetch(
         `https://cerulean-marlin-wig.cyclic.app/activities/${id}`
       );
       const data = await res.json();
       setDdetail(data);
     };
-    fetchPost();
+    fetchDetail();
   }, [id]);
 
   return (
