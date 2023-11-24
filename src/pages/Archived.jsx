@@ -23,7 +23,7 @@ const Archived = () => {
     <div>
       <div>
         Feed
-        <BasicButton text={'All unarchive'} color={'error'} />
+        <BasicButton text={'All unarchive'} color={'error'} feed={feed} />
       </div>
       <ActivityList feed={feed} />
     </div>

@@ -15,7 +15,7 @@ const patchOneArchive = async (id, isArchived) => {
 
     return response;
   } catch (error) {
-    console.error('Error: patch one', error);
+    console.error('Error: patch one archive', error);
     return null;
   }
 };
