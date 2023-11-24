@@ -4,6 +4,7 @@ import handleDateTime from '../helper/handleTime';
 import handleDetail from '../helper/handleDetail';
 import switchIcon from '../helper/switchIcon';
 import getDetail from '../api/getDetail';
+import Circular from '../components/Circular/index.jsx';
 
 const Detail = () => {
   const { id } = useParams();
@@ -16,6 +17,8 @@ const Detail = () => {
     };
     fetchDetail();
   }, [id]);
+
+  if (!detail) return <Circular />;
 
   return (
     <>
