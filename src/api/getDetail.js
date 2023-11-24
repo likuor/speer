@@ -3,9 +3,6 @@ const getDetail = async (id) => {
     const response = await fetch(
       `https://cerulean-marlin-wig.cyclic.app/activities/${id}`
     );
-    // if (!response.ok) {
-    //   throw new Error('Error: response is not ok');
-    // }
 
     const data = await response.json();
     return data;

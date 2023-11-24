@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import getActivities from '../../../api/getActivities.js';
+import React from 'react';
 import ActivityList from '../../../components/ActivityList/index.jsx';
 import BasicButton from '../../../components/BasicButton/index.jsx';
 import Typography from '@mui/material/Typography';

@@ -13,7 +13,6 @@ const FeedController = () => {
           .filter((activity) => activity.is_archived === false && activity.from)
           .reverse()
       : [];
-  console.log(filterdFeed);
 
   return { filterdFeed, isLoading };
 };

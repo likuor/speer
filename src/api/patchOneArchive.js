@@ -1,4 +1,4 @@
-const patchOneArchive = async (id, isArchived) => {
+const patchOneArchive = async ({ id, isArchived }) => {
   try {
     const response = await fetch(
       `https://cerulean-marlin-wig.cyclic.app/activities/${id}`,
@@ -12,7 +12,6 @@ const patchOneArchive = async (id, isArchived) => {
         }),
       }
     );
-
     return response;
   } catch (error) {
     console.error('Error: patch one archive', error);
