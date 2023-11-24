@@ -20,13 +20,13 @@ const FeedIndex = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <div>
         Feed
         <BasicButton text={'All archived'} color={'primary'} feed={feed} />
       </div>
       <ActivityList feed={feed} />
-    </div>
+    </>
   );
 };
 
